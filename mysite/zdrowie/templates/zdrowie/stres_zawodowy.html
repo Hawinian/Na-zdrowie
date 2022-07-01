@@ -1,0 +1,230 @@
+{% extends 'zdrowie/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Stres zawodowy a zdrowie pracowników</h1>
+<p>Na przestrzeni ostatnich dekad możemy zaobserwować znaczący wzrost pracowników, którzy deklarują, że praca zawodowa ma niekorzystny wpływ na ich zdrowie. Jednym najczęściej wymienianych problemów związanych z pracą jest stres oraz ogólne zmęczenie. Ogólna liczba absencji spowodowana niepokojem, osłabieniem i bólami głowy w niektórych krajach lub organizacjach wzrosła nawet o kilkaset procent (Chmiel, 2002)!</p>
+
+<h3>Kategorie stresorów związanych z pracą zawodową</h3>
+<ul>
+    <li><b>Treść pracy</b>, np.:</li>
+    <ul>
+        <li>przeciążenie pracą,</li>
+        <li>złożona praca,</li>
+        <li>monotonna praca,</li>
+        <li>zbyt duża odpowiedzialność,</li>
+        <li>niebezpieczna praca,</li>
+        <li>sprzeczne lub niejednoznaczne wymagania.</li>
+    </ul>
+    <li><b>Warunki pracy</b>, np.:</li>
+    <ul>
+        <li>toksyczne substancje,</li>
+        <li>złe warunki (hałas, wibracje, oświetlenie, promieniowanie, temperatura),</li>
+        <li>praca wymagająca dużego wysiłku fizycznego,</li>
+        <li>brak higieny,</li>
+        <li>brak środków ochronnych.</li>
+    </ul>
+    <li><b>Warunki zatrudnienia</b>, np.:</li>
+    <ul>
+        <li>praca zmianowa,</li>
+        <li>niska płaca,</li>
+        <li>niewielkie szanse na rozwój kariery,</li>
+        <li>brak stałej umowy o pracę,</li>
+        <li>niepewność zatrudnienia.</li>
+    </ul>
+    <li><b>Relacje społeczne w pracy</b>, np.:</li>
+    <ul>
+        <li>złe przywództwo,</li>
+        <li>małe wsparcie społeczne,</li>
+        <li>niewielki udział w podejmowanie decyzji,</li>
+        <li>ograniczenie swobód,</li>
+        <li>dyskryminacja.</li>
+    </ul>
+</ul>
+<p>(Chmiel, 2002)</p>
+
+<h3>Możliwe objawy stresu</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Typ reakcji/poziom</th>
+      <th scope="col">Indywidualny</th>
+      <th scope="col">Interpersonalny</th>
+      <th scope="col">Organizacyjny</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Afektywne</th>
+      <td>niepokój, napięcie, złość, przygnębienie, apatia</td>
+      <td>drażliwość</td>
+      <td>niezadowolenie z pracy</td>
+    </tr>
+    <tr>
+      <th scope="row">Poznawcze</th>
+      <td>bezradność, bezsilność, upośledzenie funkcji poznawczych, trudności z podejmowaniem decyzji</td>
+      <td>wrogość, podejrzliwość</td>
+      <td>cyniczny stosunek do roli zawodowej, poczucie, że jest się niedocenianym, brak zaufania do współpracowników</td>
+    </tr>
+    <tr>
+      <th scope="row">Fizyczne</th>
+      <td colspan="3">złe samopoczucie fizyczne, zaburzenia psychosomatyczne, osłabienie układu immunologicznego, zmieniony poziom hormonów</td>
+    </tr>
+      <tr>
+      <th scope="row">Behawioralne</th>
+      <td>nadaktywność, impulsywność, zwiększone spożycie środków pobudzających, nadmierny apetyt lub jego brak</td>
+      <td>gwałtowne wybuchy, zachowania agresywne, konflikty, izolacja społeczna</td>
+      <td>niski poziom wykonywania pracy, obniżona wydajność, opieszałość, fluktuacja personelu, częstsze zwolnienia lekdarskie, niewłaściwe zarządzanie czasem</td>
+    </tr>
+      <tr>
+      <th scope="row">Motywacyjne</th>
+      <td>utrata zapału, entuzjamu, złudzeń, rozczarowanie, znudzenie, zobojętnienie</td>
+      <td>utrata zainteresowania innymi, obojętność, zniechęcenie</td>
+      <td>utrata motywacji do pracy, opór przed pójściem do pracy, niskie morale</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Następstwa stresu</h3>
+<ul>
+    <li><b>Wczesne następstwa</b>:</li>
+    <ul>
+        <li>obniżenie nastroju,</li>
+        <li>zakłócenia somatyczne (drobne), np.:</li>
+        <ul>
+            <li>skurcze żołądka,</li>
+            <li>zaburzenia trawienia,</li>
+            <li>przyspieszone bicie serca.</li>
+        </ul>
+        <li>modyfikacja procesów poznawczych</li>
+        <li>pogorszenie sprawności działania</li>
+    </ul>
+    <li><b>Późne następstwa</b>:</li>
+    <ul>
+        <li>konsekwencje zdrowotne,</li>
+        <li>ryzyko infekcji,</li>
+        <li>zaburzenia zachowania,</li>
+        <li>zmiany postaw wobec siebie i świata,</li>
+        <li>wypalenie zawodowe.</li>
+    </ul>
+</ul>
+
+<h3>Choroba zawodowa</h3>
+<p>Choroba zawodowa - choroba wymieniona w wykazie chorób zawodowych, jeżeli w wyniku oceny warunków pracy można stwierdzić bezspornie lub z wysokim prawdopodobieństwem, że została ona spowodowana działaniem czynników szkodliwych dla zdrowia występujących w środowisku pracy albo w związku ze sposobem wykonywania pracy, zwanym “narażeniem zawodowym”.</p>
+
+<div class="d-flex justify-content-center">
+<img src="{% static 'zdrowie/images/choroby.png' %}" class="img-fluid" alt="Responsive image">
+</div>
+<p>Źródło: (Świątkowska, Hanke, Szeszenia-Dąbrowska, 2019)</p>
+
+<h3>Wypalenie zawodowe</h3>
+<p>Herbert Freudenberger powiedział, że <b>wypalenie zawodowe</b>, to stan wyczerpania spowodowany nadmiernymi wymaganiami w odniesieniu do posiadanej energii, siły, zasobów.</p>
+
+<h6>Trójskładnikowy model wypalenia</h6>
+<p>Christina Maslach stworzyła trójskładnikowy model wypalenia, na który składają się:</p>
+<ul>
+    <li><b>Wyczerpanie emocjonalne</b> - uczucie nadmiernego zmęczenia i nadwyrężenia zasobów emocji.</li>
+    <li><b>Depersonalizacja</b> - reagowanie na innych w sposób negatywny, bezduszny, zbyt obojętny.</li>
+    <li><b>Obniżone poczucie dokonań osobistych</b> - odnosi się do poczucia niekompetencji oraz braku osiągnięć w pracy.</li>
+</ul>
+
+<h3>Model witaminowy</h3>
+<p>W latach osiemdziesiątych XX wieku Peter Warr opracował model zdrowia psychicznego, zwany modelem witaminowym. U podstaw tego modelu leży analogia pomiędzy psychologicznym oddziaływaniem czynników środowiskowych na nasze zdrowie psychiczne, a wpływem witamin na stan naszego zdrowia fizycznego.</p>
+
+<p>Model ten składa się z dziewięciu właściwości pracy podzielonych na dwie kategorie:</p>
+<ul>
+    <li><b>Właściwości CE</b> - "stały skutek" - im wyższy poziom tym lepiej</li>
+    <ul>
+        <li>Dostępność środków finansowych</li>
+        <li>Fizyczne bezpieczeństwo</li>
+        <li>Wysoki status społeczny</li>
+    </ul>
+    <li><b>Właściwości AD</b> - "szkodliwy nadmiar" - zarówno nadmiar i jak niedobór są szkodliwe</li>
+    <ul>
+        <li>Możliwość sprawowania kontroli</li>
+        <li>Możliwość wykorzystania umiejętności</li>
+        <li>Cele narzucane z zewnątrz</li>
+        <li>Różnorodność</li>
+        <li>Przejrzystość środowiska</li>
+        <li>Możliwość nawiązywania i utrzymywania kontaktów interpersonalnych</li>
+    </ul>
+</ul>
+
+<p>Najważniejszym wskaźnikiem zadowolenia z pracy jest <b>afektywny dobrostan</b>, który możemy rozpatrywać na trzech wymiarach: nieprzyjemność-przyjemność, niepokój-spokój, przygnębienie-entuzjazm.</p>
+
+<p>Wyróżnia się również trzy kategorie indywidualnych atrybutów, które mogą modyfikować wpływ właściwości pracy na zdrowie psychiczne jednostki:</p>
+<ul>
+    <li>wartości,</li>
+    <li>zdolności,</li>
+    <li>wyjściowy stan zdrowia psychicznego.</li>
+</ul>
+
+<h3>Wsparcie społeczne w miejscu pracy</h3>
+<p>Wsparcie społeczne spełnia kluczową rolę w łagodzeniu stresu. Nie możemy przecenić jego roli w aspektach zdrowotnych w każdej dziedzinie naszego życia, nie tylko tego zawodowego. Możemy wyróżnić cztery ujęcia wsparcia społecznego w miejscu pracy:</p>
+<ul>
+    <li><b>Integracja społeczna</b> - liczba i siła związków danej osoby z innymi pracownikami w ramach jej sieci społecznej.</li>
+    <li><b>Satysfakcjonujące relacje</b> - dobry klimat organizacyjny oraz przyjazne, bliskie relacje zawodowe z przełożonymi, współpracownikami i podwładnymi.</li>
+    <li><b>Spostrzegane dostępne wsparcie</b> - przekonanie, że można liczyć na bezpośrednią pomoc lub wsparcie, informacje, rady wskazówki i empatyczne zrozumienie ze strony innych.</li>
+    <li><b>Otrzymywane wsparcie</b> - reakcje współpracowników po zadziałaniu stresora.</li>
+</ul>
+<p>Możemy wyróżnić również cztery typy takiego wsparcia:</p>
+<ul>
+    <li>wsparcie emocjonalne,</li>
+    <li>wsparcie instrumentalne,</li>
+    <li>wsparcie informacyjne,</li>
+    <li>wsparcie oceniające (np. informacje zwrotne).</li>
+</ul>
+
+<h3>Działania interwencyjne</h3>
+<p>Działania interwencyjne skierowane przeciwko stresowi zawodowemu mogą się koncentrować na jednym z trzech poziomów: organizacja, styk jednostki z organizacją oraz jednostka. Ponadto interwencje mogą służyć jednemu z pięciu celów: rozpoznaniu (wczesne wykrywanie stresorów), prewencji pierwotnej (osłabianie stresorów), prewencji wtórnej (zmiana sposobu w jaki pracownicy reagują na stresory), leczeniu i rehabilitacji.</p>
+
+<p>Przykładowe działania interwencyjne skierowane przeciwko stresowi zawodowemu:</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Poziom/cel</th>
+      <th scope="col">Rozpoznanie</th>
+      <th scope="col">Prewencja pierwotna</th>
+      <th scope="col">Prewencja wtórna</th>
+      <th scope="col">Leczenie</th>
+      <th scope="col">Rehabilitacja</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <th scope="row">Organizacja</th>
+        <td>Audyt dotyczący stresu zawodowego</td>
+        <td>Poprawianie treści i środowiska pracy; Planowanie czasu; Rozwijanie kadry menedżerskiej; Firmowe programy poprawiania kondycji fizycznej i stanu zdrowia; Zarządzanie karierami</td>
+        <td>Antycypacyjna socjalziacja; Zarządzanie przepływem infromacji, podejmowaniem decyzji i konfliktami; Rozwój organizacji</td>
+        <td>Instytucjonalizacja usług na rzecz zdrowia i bezpieczeństwa pracy; Programy pomocy dla pracowników</td>
+        <td>Reorientacja zawodowa</td>
+    </tr>
+    <tr>
+      <th scope="row">Jednostka/organizacja</th>
+      <td>Indywidualna obserwacja</td>
+      <td>Zarządzanie czasem; Szkolenie w zakresie umiejętności interpersonalnych; Kształtowanie realistycznego wyobrażenia o pracy; Utrzymywanie równowagi między pracą a życiem osobistym</td>
+      <td>Koleżeskie grupy wsparcia; Coaching i konsultacje; Planowanie kariery</td>
+        <td>Specjalistyczne poradnictwo i psychoterapia</td>
+        <td>Indywidualne wskazówki i pomoc</td>
+    </tr>
+    <tr>
+      <th scope="row">Jednostka</th>
+      <td>Autoobserwacja</td>
+      <td>Dydaktyka radzenia sobie ze stresem; Promowanie zdrowego stylu życia</td>
+      <td colspan="3">Techniki poznawczo-behawioralne; Relaksacja</td>
+    </tr>
+  </tbody>
+</table>
+<p>Tabela opracowana na podstawie (Chmiel, 2002).</p>
+
+<hr>
+<h6>Przypisy</h6>
+<ol>
+    <li>Chmiel, N. (Ed.). (2002). Psychologia pracy i organizacji. Gdańskie Wydawn. Psychologiczne.</li>
+</ol>
+
+
+
+
+
+{% endblock %}

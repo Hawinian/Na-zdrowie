@@ -1,0 +1,17 @@
+{% extends 'zdrowie/base.html' %}
+{% load bootstrap %}
+{% block content %}
+
+<h1>System doradczy dla Twojego zdrowia</h1>
+<p>Drogi Użytkowniku! Poniżej czeka na Ciebie formularz dotyczący Twoich nawyków zdrowotnych. Podane w nim przez Ciebie informacje są w pełni anonimowe oraz nie będą przechowywane w żaden sposób. Na podstawie Twoich wyborów nasz system przygotuje dla Ciebie kilka rekomendacji w jaki sposób lepiej możesz zadbać o swoje zdrowie.</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form | bootstrap }}
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Wyślij</button>
+    <br>
+    <br>
+</form>
+
+{% endblock %}

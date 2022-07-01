@@ -1,0 +1,220 @@
+{% extends 'zdrowie/base.html' %}
+{% load bootstrap %}
+{% block content %}
+
+<h1>Porady odnośnie Twojego zdrowia</h1>
+
+<p><b>Wiek:</b> {{wiek}}</p>
+<p><b>Płeć:</b> {% if plec == '1' %} mężczyzna {% else %} kobieta {% endif %}</p>
+<p><b>Wzrost:</b> {{wzrost}} cm</p>
+<p><b>Waga:</b> {{waga}} kg</p>
+
+<br>
+<h5>Wskaźnik masy ciała</h5>
+<p><b>Twoje BMI:</b> {{bmi}} </p>
+
+{% if bmi >= 18.5 and bmi < 25 %}
+    <div class="paper green">
+{% else %}
+    <div class="paper pink">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% with opis="Pamiętaj, że wskaźnik BMI, to pomiar jedynie orientacyjny. Nie przekazuje on wszystkich niezbędnych informacji potrzebnych do oceny stanu zdrowia człowieka. Pomaga jednak w łatwy sposób zorientować się czy występuje powód do zmartwień oraz dalszej interwencji." %}
+
+{% if bmi < 16 %}
+<p>Twoje bmi wskazuje na: <b>wygłodzenie</b>. Możliwość wystąpienia komplikacji zdrowotnych. Koniecznie udaj się do lekarza. {{opis}}</p>
+{% elif bmi >= 16 and bmi < 17 %}
+<p>Twoje bmi wskazuje na: <b>wychudzenie</b>. Istnieje minimalne ryzyko chorób związanych z otyłością. {{opis}}</p>
+{% elif bmi >= 17 and bmi < 18.5 %}
+<p>Twoje bmi wskazuje na: <b>niedowagę</b>. Istnieje minimalne ryzyko chorób związanych z otyłością. {{opis}}</p>
+{% elif bmi >= 18.5 and bmi < 25 %}
+<p>Twoje bmi wykazuje <b>wartość prawidłową</b>. Tak trzymaj. Zdrowy balans pomiędzy wagą, a wzrostem to podstawa dobrego samopoczucia.</p>
+{% elif bmi >= 25 and bmi < 30 %}
+<p>Twoje bmi wskazuje na: <b>nadwagę</b>. Istnieje ryzyko zachorowania na choroby związane z nadwagą. Warto pomyśleć o zmianie nawyków zdrowotnych. {{opis}}</p>
+{% elif bmi >= 30 and bmi < 35 %}
+<p>Twoje bmi wskazuje na: <b>I stopień otyłości</b>. Istnieje wysokie ryzyko zachorowania na choroby związane z otyłością. Koniecznie zmień swoje nawyki zdrowotne. {{opis}}</p>
+{% elif bmi >= 40  %}
+<p>Twoje bmi wskazuje na: <b>II stopień otyłości</b>. Istnieje bardzo wysokie ryzyko zachorowania na choroby związane z otyłością. Koniecznie zmień swoje nawyki zdrowotne. {{opis}}</p>
+{% endif %}
+
+{% endwith %}
+
+<div class="tape-section"></div>
+    </div>
+
+
+<h5>Sen</h5>
+{% if sen == '4' %}
+    <div class="paper green">
+{% else %}
+    <div class="paper pink">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% if sen == '4' %}
+    <p>Twoja ilość snu jest <b>idealna</b>. Śpisz dokładnie tyle ile potrzebuje Twój organizm. Tak trzymaj!</p>
+{% elif sen == '1' %}
+    <p>Śpisz <b>zdecydowanie za mało</b>. Musisz znaleźć więcej czasu na sen lub udać się do specjalisty. Taka ilość snu zagraża Twojemu zdrowiu.</p>
+{% elif sen == '2' %}
+    <p>Śpisz <b>za mało</b>. Musisz znaleźć więcej czasu na sen lub udać się do specjalisty. Taka ilość snu jest niebezpieczna dla Twojego zdrowia.</p>
+{% elif sen == '3' %}
+    <p>Śpisz <b>trochę za mało</b>. Musisz znaleźć więcej czasu na sen. Taka ilość snu może mieć negatywny oddźwięk na Twoje zdrowie.</p>
+{% elif sen == '5' %}
+    <p>Śpisz <b>trochę za długo</b>. Po takiej dawce snu możesz mieć problem z energią i rozbudzeniem przez resztę dnia. Postaraj się wstawać trochę wcześniej.</p>
+{% elif sen == '6' %}
+    <p>Śpisz <b>zdecydowanie za długo</b>. Taka ilość snu każdego dnia prowadzi do rozregulowania Twojego zegara biologicznego. Musisz zmienić swoje nawyki zdrowotne.</p>
+{% endif %}
+
+<div class="tape-section"></div>
+    </div>
+
+
+<h5>Śniadania</h5>
+{% if sniadanie == '4' %}
+    <div class="paper green">
+{% else %}
+    <div class="paper pink">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% if sniadanie == '4' %}
+    <p>Śniadanie, to kluczowy posiłek dnia. <b>Tak trzymaj!</b> Nie zapominaj o jego jedzeniu.</p>
+{% else %}
+    <p>Nie wolno zapominać o śniadaniu. Postaraj się <b>zaplanować jedzenie tego posiłku</b> każdego dnia. Da Ci to energię na pozostałą część dnia.</p>
+{% endif %}
+
+<div class="tape-section"></div>
+    </div>
+
+<h5>Zapotrzebowanie na wodę</h5>
+
+{% if zapotrzebowanie_na_wode >= woda %}
+    <div class="paper pink">
+{% else %}
+    <div class="paper green">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% if zapotrzebowanie_na_wode >= woda %}
+    <p>Pijesz <b>za mało wody</b>. Powinienieś pić przynajmniej {{zapotrzebowanie_na_wode}} litrów dziennie.</p>
+{% else %}
+    <p>Pijesz <b>wystarczającą ilość wody.</b> Tak trzymaj!</p>
+{% endif %}
+
+<div class="tape-section"></div>
+    </div>
+
+
+<h5>Spożywanie alkoholu</h5>
+
+{% if alkohol == '4' or alkohol == '5' %}
+    <div class="paper pink">
+{% else %}
+    <div class="paper green">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% if alkohol == '4' or alkohol == '5' %}
+        <p>{% if plec == '1' %} Powinieneś {% else %} Powinnaś {% endif %} <b>pić mniej alkoholu</b>. Pamiętaj, że spożywanie zbyt dużej ilości alkoholu ma druzgocący efekt na Twój organizm. Dodatkowo możesz popaść w uzależnienie.</p>
+{% elif alkohol == '1' or alkohol == '2' or alkohol == '3'%}
+    <p>Ilość spożywanego <b>alkoholu jest w normie</b>.</p>
+{% endif %}
+
+<div class="tape-section"></div>
+    </div>
+
+<br>
+<h5>Palenie papierosów</h5>
+
+{% if papierosy == '1' %}
+    <div class="paper green">
+{% else %}
+    <div class="paper pink">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% if papierosy == '1' %}
+    <p>Trzymaj tak dalej i <b>nie pal wcale</b>.</p>
+{% else %}
+    <p><b>Palisz za dużo.</b> Postaraj się rzucić palenie. Każdy wypalony papieros, to zwiększone ryzyko szeregu chorób.</p>
+{% endif %}
+
+<div class="tape-section"></div>
+    </div>
+
+<br>
+<h5>Aktywność fizyczna</h5>
+
+{% if cwiczenia == '1' or cwiczenia == '2' or cwiczenia == '3' %}
+    <div class="paper pink">
+{% else %}
+    <div class="paper green">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% if cwiczenia == '1' or cwiczenia == '2' or cwiczenia == '3' %}
+    <p>Musisz <b>ćwiczyć zdecydowanie więcej</b>. Ćwiczenia fizyczne, to podstawa zdrowego trybu życia oraz dobrego samopoczucia.</p>
+{% elif cwiczenia == '3' %}
+    <p>Ruch to zdrowie. <b>Postaraj się zwiększyć intensywność treningów do przynajmniej 3 lub 4 dni w tygodniu.</b></p>
+{% elif cwiczenia == '4' or cwiczenia == '5' %}
+    <p>Tak trzymaj! <b>Twoja intenywność treningowa jest idealna</b>.</p>
+{% endif %}
+
+<div class="tape-section"></div>
+    </div>
+
+<br>
+<h5>Opieka stomatologiczna</h5>
+
+{% if dentysta == '1' or dentysta == '2' %}
+    <div class="paper pink">
+{% else %}
+    <div class="paper green">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% if dentysta == '1' %}
+    <p>Od Twojej ostatniej wizyty minęło zbyt dużo czasu. Nawet jeśli nie odczuwasz znaczącego cierpienia ani dyskomfortu nie oznacza, to pełnego zdrowia jamy ustnej. Koniecznie udaj się na wizytę kontrolną!</p>
+{% elif dentysta == '2' %}
+    <p>Od Twojej ostatniej wizyty minęło już trochę czasu. Koniecznie zaplanuj kolejną wizytę kontrolną.</p>
+{% elif dentysta == '3' %}
+    <p>Od ostatniej wizyty upłynęło trochę czasu. Warto żebyś pomyślał kiedy udasz się na następną.</p>
+{% elif dentysta == '4' %}
+    <p>Tak trzymaj! Dentystę {% if plec == '1' %} powinieneś {% else %} powinnaś {% endif %} odwiedzać przynajmniej raz na pół roku.</p>
+{% endif %}
+
+<div class="tape-section"></div>
+    </div>
+
+<br>
+<h5>Ilość czasu spędzana przed elektroniką</h5>
+
+{% if ekrany >= 5 %}
+    <div class="paper pink">
+{% else %}
+    <div class="paper green">
+{% endif %}
+
+<div class="tape-section"></div>
+
+{% if ekrany >= 5 %}
+    <p>{% if plec == '1' %} Powinieneś {% else %} Powinnaś {% endif %} <b>ograniczyć</b> ilość czasu spędzaną przed ekranami urządzeń elektronicznych. Zbyt długi czas spędzany przed elektroniką ma negatywny wpływ na Twoje zdrowie oraz samopoczucie.</p>
+{% elif ekrany < 5 %}
+    <p>Nie spędzasz <b>zbyt dużej</b> ilości czasu przed ekranem. Tak trzymaj!</p>
+{% endif %}
+
+<div class="tape-section"></div>
+    </div>
+
+
+
+{% endblock %}

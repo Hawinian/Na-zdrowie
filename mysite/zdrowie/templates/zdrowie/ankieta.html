@@ -1,0 +1,137 @@
+{% extends 'zdrowie/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Zachowania zdrowotne wśród studentów</h1>
+
+<p>W dniach od 27 marca do 7 kwietnia przeprowadziłem badanie sprawdzające zachowania zdrowotne studentów. W przeprowadzonej on-line, anonimowej, ankiecie zgromadziłem <b>192 odpowiedzi</b>. Najmłodszy z badanych miał lat 19, a najstarszy 31. Średnia wieku, to <b>22,5 lat</b>. W badaniu wzięło udział 153 kobiety, 31 mężczyzn oraz 8 osób, które nie zadeklarowały płci.</p>
+
+<p>Badanie było podzielone na 4 obszary:</p>
+<ol>
+    <li><b>Informacje o badanym</b></li>
+        <ul>
+            <li>wiek,</li>
+            <li>płeć,</li>
+            <li>informacja o tym czy jest studentem.</li>
+        </ul>
+    <li><b>Nawyki zdrowotne</b></li>
+    <ul>
+        <li>Jak często jedzą śniadanie w tygodniu?</li>
+        <li>Jak często zdarza im się podjadać między posiłkami?</li>
+        <li>Czy ich waga jest w normie?</li>
+        <li>Jak często palą?</li>
+        <li>Jak często piją?</li>
+        <li>Jak często podejmują aktywność fizyczną?</li>
+        <li>Jak długi jest ich przeciętny sen?</li>
+    </ul>
+    <li><b>Zachowania zdrowotne</b></li>
+    <ul>
+        <li>Jak bardzo dbasz o swoje pozytywne nastawienie do życia?</li>
+        <li>Jak bardzo dbasz o swoje zdrowie fizyczne?</li>
+        <li>Jak bardzo dbasz o swoją kondycję umysłową?</li>
+        <li>Jak bardzo dbasz o odpowiednią profilaktykę oraz leczenie?</li>
+        <li>Jak bardzo zachowujesz odpowiednią świadomość ekologiczną?</li>
+        <li>Czy uważasz, że podejmujesz ryzykowne zachowania seksualne?</li>
+        <li>Czy zapinasz pasy bezpieczeństwa podczas jazdy samochodem?</li>
+        <li>Czy regularnie samobadasz własne piersi lub jądra?</li>
+    </ul>
+    <li><b>Uwarunkowania wpływające na zdrowie</b></li>
+    <ul>
+        <li>Które z wymienionych czynników mają największy pozytywny wpływ na Twoje zdrowie?</li>
+        <li>Które z wymienionych czynników mają największy negatywny wpływ na Twoje zdrowie?</li>
+        <li>Jak oceniasz w jaki sposób Twój tryb życia wpływa na Twoje zdrowie?</li>
+        <li>Jak oceniasz wpływ pandemii COVID-19 na stan Twojego zdrowia?</li>
+    </ul>
+</ol>
+
+<h3>Nawyki zdrowotne</h3>
+
+<div class="d-flex justify-content-center">
+{{ sniadania|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ podjadanie|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ waga|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ papierosy|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ alkohol|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ aktywnosc|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ sen|safe }}
+</div>
+
+<h3>Zachowania zdrowotne</h3>
+<p> W tej części badania, ankietowani wybierali odpowiedź na 5-stopniowej skali. Od odpowiedzi <b>1 - nie dbam wcale</b>, do odpowiedzi <b>5 - dbam bardzo mocno</b>.</p>
+<p>Z 5 badanych zachowań najlepiej wypadła dbałość o <b>kondycję umysłową</b>, a najgorzej dbałość o <b>zdrowie fizyczne</b>.</p>
+
+<div class="d-flex justify-content-center">
+{{ nastawienie|safe }}
+</div>
+
+
+<div class="d-flex justify-content-center">
+{{ zdrowie_fizyczne|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ kondycja_umyslowa|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ profilaktyka|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ swiadomosc|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ aktywnosc_seksualna|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ pasy|safe }}
+</div>
+
+<div class="d-flex justify-content-center">
+{{ samobadanie|safe }}
+</div>
+
+<h3>Czynniki wpływające na zdrowie</h3>
+<p>Badanym zostały przedstawione dwie listy czynników, które mogą wpływać na ich zdrowie w sposób pozytywny lub negatywny. Każdy z badanych miał wybrać z obu list 3 czynniki. Dlatego sumarycznie obie listy zgromadziły 576 odpowiedzi.</p>
+
+<p>Dwoma najczęściej wybieranymi czynnikami pozytywnie wpływającymi na nasze zdrowie zostały: <b>Jakość kontaktów międzyludzkich</b> oraz <b>Samopoczucie psychiczne</b>. Są to zgoła odmienne wyniki od tych, które uzyskała Pani Profesor Grażyna Dolińska-Zygmunt w swojej książce <i>Podmiotowe uwarunkowania zachowań promujących zdrowie</i>. W jej badaniach dwie pierwsze pozycje zajęły <b>Sposób odżywiania</b> oraz <b>Aktywność fizyczna</b>. Jednakże w swoich badaniach pani Profesor obejmowała całą populację. Różnica w wybranych przez badanych czynnikach może wynikać z innych priorytetów, którymi kierowały się poszczególne grupy oraz zmian pokoleniowych, które nastąpiły pomiędzy badaniami.</p>
+<div>
+{{ pozytywne|safe }}
+</div>
+
+<p>W przypadku czynników negatywnie wpływających na zdrowie nie mamy tak wyraźnej dominacji kilku czyników. Możemy jednak wyróżnić najczęściej wybieraną trójkę: <b>Słaba odporność psychiczna</b>, <b>Brak ruchu</b> oraz <b>Negatywne nastawienie do życia</b>. Ponownie wybrane czynniki nie pokrywają się z wynikami badań Pani Profesor Grażyn Dolińskiej-Zygmunt. W przypadku jej badań dominowały: <b>Błędy żywieniowe</b>, <b>Brak czasu i umiejetności wypoczywania</b> oraz <b>Nieumiejętność radzenia sobie z problemami</b>. Jednakże również wśród studentów te czynniki znalazły się wysoko.</p>
+<div>
+{{ negatywne|safe }}
+</div>
+
+<p>Większość badanych oceniła, że ich tryb życia nie wpływa w szczególny sposób na ich zdrowie lub wpływa w sposób negatywny. Wynika z tego, że w przyszłości powinno wprowadzić się programy profilaktyczne, których celem będzie ułatwienie studentom zmiany trybu życia, na taki który będzie lepiej służył ich zdrowiu.</p>
+<div>
+{{ tryb_zycia|safe }}
+</div>
+
+<p>Większość badanych oceniła, że pandemia COVID-19 wpłynęła negatywnie na ich stan zdrowia lub miała wpływ neutralny. Dlatego tak ważne jest żeby zadbać o poprawę zdrowia u osób, które zostało ono obniżone podczas pandemii.</p>
+<div>
+{{ covid|safe }}
+</div>
+
+{% endblock %}

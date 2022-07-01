@@ -1,0 +1,44 @@
+{% extends 'zdrowie/base.html' %}
+{% load bootstrap %}
+{% block content %}
+
+{% load static %}
+
+<h1>Twoje rekomendacje książkowe</h1>
+
+<p>Drogi użytkowniku! Poniżej czeka na Ciebie mój autorski system rekomendacji książkowych z zakresu <b>Zdrowego odżywiania</b>. Wybierz interesujące Cię zagadnienie, kliknij Szukaj, a otrzymasz listę książek godnych polecenia z wybranego zakresu.</p>
+
+<form method="get">
+  {{ filter.form | bootstrap }}
+
+  <br>
+<button type="submit" class="btn btn-primary btn-lg btn-block">Szukaj</button>
+</form>
+<br>
+
+
+  {% for book in filter.qs %}
+
+<div class="card mb-3 mx-auto shadow-lg p-3 mb-5 bg-white rounded" style="">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <img src="{{ book.image }}" class="zoom img-fluid rounded-start shadow p-3 mb-5 bg-white rounded" width="250" height="250" alt="...">
+    </div>
+
+    <div class="col-md-9">
+      <div class="card-body">
+        <h5 class="card-title">{{book.title}}</h5>
+        <p class="card-text"><b>{{book.author}}</b></p>
+        <p class="card-text">{{book.description}} <br><i>Opis pochodzi od wydawcy.</i></p>
+
+        <p class="card-text"><small class="text-muted">{% for tag in book.tags.all %} {{tag}}{% if not forloop.last %}, {% endif %} {% endfor %} </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  {% endfor %}
+
+{% endblock %}

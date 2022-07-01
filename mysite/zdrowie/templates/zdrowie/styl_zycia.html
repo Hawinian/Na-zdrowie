@@ -1,0 +1,124 @@
+{% extends 'zdrowie/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Zdrowy styl życia</h1>
+<p><b>Styl życia</b> - luźno powiązany zespół zachowań (nawyków i czynności), charakterystyczny dla danej jednostki lub grupy społecznej, mający istotne znaczenie dla zdrowia. Są to decyzje i zachowania jednostki, które do pewnego stopnia podlegają jej kontroli.</p>
+
+<p>Styl naszego życia uwarunkowany jest:</p>
+<ul>
+    <li>cechami temperamentu,</li>
+    <li>wiedzą,</li>
+    <li>uogólnionymi poglądami i przekonaniami (dotyczącymi świata, życia, własnej osoby),</li>
+    <li>kompetencjami,</li>
+    <li>systemem wartości i indywidualnymi doświadczeniami w zakresie zdrowia,</li>
+    <li>zmiennymi społeczno-kulturowymi.</li>
+</ul>
+
+<p><b>Prozdrowotny styl życia</b> to: świadome podejmowanie określonych działań i zach. które zwiększają potencjał własnego zdrowia, eliminują zagrożenia i służą zdrowiu. Na taki styl życia składają się:</p>
+<ul>
+    <li>zachowania związane ze <b>zdrowiem fizycznym</b>:</li>
+    <ul>
+        <li>dbałość o ciało,</li>
+        <li>aktywność fizyczna,</li>
+        <li>racjonalne żywienie,</li>
+        <li>hartowanie się,</li>
+        <li>sen.</li>
+    </ul>
+    <li>związane ze <b>zdrowiem psychospołecznym</b>:</li>
+    <ul>
+        <li>branie i dawanie wsparcia, </li>
+        <li>unikanie nadmiaru stresu, </li>
+        <li>radzenie sobie z problemami i stresem.</li>
+    </ul>
+    <li><b>zachowania prewencyjne</b>:</li>
+    <ul>
+        <li>samokontrola zdrowia,</li>
+        <li>badania profilaktyczne,</li>
+        <li>zachowania bezpieczne w życiu codziennym, seksualnym.</li>
+    </ul>
+    <li><b>niepodejmowanie zachowań ryzykownych</b>:</li>
+    <ul>
+        <li>niepalenie tytoniu,</li>
+        <li>ograniczenie używania alkoholu,</li>
+        <li>nieużywanie substancji psychoaktywnych.</li>
+    </ul>
+</ul>
+
+<p>Według teorii Marca Lalonde'a za nasze zdrowie, aż w ponad 50% jest odpowiedzialne nasze własne zachowanie. W dużej mierze to od nas zależy jak się będziemy czuć oraz czy będziemy zdrowi. Dlatego myśląc o naszym zdrowiu nie możemy ignorować tych informacji!
+</p>
+
+<div class="d-flex justify-content-center">
+<img src="{% static 'zdrowie/images/czynniki_zdrowotne.png' %}" class="img-fluid" alt="Responsive image">
+</div>
+
+<p>Każdy z nas ma własne wyobrażenia jakie aktywności składają się na zdrowy styl życia. Dla mnie są to np.: odpowiednie odżywianie, aktywność fizyczna, szczepienia ochronne czy też regularne kontrolowanie stanu własnego zdrowia.</p>
+
+<h3>Alameda Study</h3>
+<p>W 1965 roku rozpoczął się rewolucyjny program badawczy o nazwie Alameda Study. Przyniósł on nam liczne i wartościowe dane warte analizy pod kątem naszych nawyków zdrowotnych. Wzięło w nim udział ponad 7000 osób. Badanie obejmowało 7 zachowań, które można określić jako dobre nawyki zdrowotne. Były to:</p>
+<ul>
+    <li>regularne spożywanie śniadań,</li>
+    <li>powstrzymywanie się od jedzenia między posiłkami,</li>
+    <li>7-8 godzin snu na dobę,</li>
+    <li>utrzymywanie prawidłowej wagi ciała,</li>
+    <li>powstrzymywanie się od papierosów,</li>
+    <li>umiarkowane spożywanie alkoholu,</li>
+    <li>systematyczna aktywność fizyczna.</li>
+</ul>
+
+<p>Grupa osób przestrzegających sześciu lub siedmiu miała szansę na średnio dłuższe życie o 11 lat niż grupa osób przestrzegających co najwyżej trzech nawyków. Nie wszystkie zasady miały na to jednak równomierny wpływ. Najbardziej znaczące okazało się <b>powstrzymywanie od papierosów</b> w ciągu całego życia oraz <b>aktywność fizyczna</b>.</p>
+
+<h3>Uwarunkowania zdrowia</h3>
+<p>Pani profesor Grażyna Dolińska-Zygmunt w swojej książce <i>Podmiotowe uwarunkowania zachowań promujących zdrowie</i> przedstawiła wyniki niezwykle interesujących badań, które dostarczają nam informacji odnośnie tego jak my sami postrzegamy wpływ pewnych czynników na nasze zdrowie. Co uważamy za najbardziej korzystne dla naszego zdrowia, a co za najmniej korzystne.</p>
+
+<h6>Czynniki pozytywnie wpływające na własną kondycję zdrowotną</h6>
+<ul>
+    <li>Sposób odżywiania - 80% badanych</li>
+    <li>Aktywność fizyczna - 67% badanych</li>
+    <li>Umiejętność wypoczywania - 63% badanych</li>
+    <li>Tryb życia - 38% badanych</li>
+    <li>Czystość środowiska - 30% badanych</li>
+    <li>Jakość kontaktów międzyludzkich - 29% badanych</li>
+    <li>Poczucie zadowolenia z życia - 28% badanych</li>
+    <li>Radzenie sobie ze stresem - 28% badanych</li>
+    <li>Samopoczucie psychiczne - 24% badanych</li>
+    <li>Warunki pracy - 21% badanych</li>
+    <li>Stosowanie używek i posiadanie nałogów - 18% badanych</li>
+    <li>Warunki atmosferyczne - 18% badanych</li>
+    <li>Dostosowywanie się do zaleceń lekarskich oraz dostępność i jakość usług medycznych - 17% badanych</li>
+    <li>Pozytywny stosunek do siebie - 17% badanych</li>
+    <li>Uwarunkowania genetyczne - 16% badanych</li>
+    <li>Samorealizacja - 9% badanych</li>
+    <li>Warunki materialne - 4% badanych</li>
+</ul>
+
+<h6>Czynniki osłabiające własną kondycję zdrowotną</h6>
+<ul>
+    <li>Błędy żywieniowe - 66% badanych</li>
+    <li>Brak czasu i umiejętności wypoczywania - 57% badanych</li>
+    <li>Nieumiejętność radzenia sobie z problemami - 56% badanych</li>
+    <li>Brak ruchu - 52% badanych</li>
+    <li>Nałogi, używki - 42% badanych</li>
+    <li>Zanieczyszczenie środowiska - 34% badanych</li>
+    <li>Zaniedbywanie siebie - 22% badanych</li>
+    <li>Problemy interpersonalne - 20% badanych</li>
+    <li>Słaba odporność psychiczna - 17% badanych</li>
+    <li>Warunki atmosferyczne - 16% badanych</li>
+    <li>Uciążliwości pracy - 16% badanych</li>
+    <li>Złe warunki materialne - 14% badanych</li>
+    <li>Negatywne nastawienie do życia, siebie i świata - 13% badanych</li>
+    <li>Uwarunkowania genetyczne - 12% badanych</li>
+    <li>Złe funkcjonowanie służby zdrowia - 10% badanych</li>
+</ul>
+
+<h6>Ocena wpływu własnego trybu życia na zdrowie</h6>
+<ul>
+    <li>Osłabia moje zdrowie - 4% badanych</li>
+    <li>Raczej osłabia moje zdrowie - 25% badanych </li>
+    <li>Średnio wpływa na moje zdrowie - 39% badanych</li>
+    <li>Raczej umacnia moje zdrowie - 24% badanych</li>
+    <li>Umacnia moje zdrowie - 8% badanych</li>
+</ul>
+
+
+{% endblock %}
